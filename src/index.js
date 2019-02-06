@@ -31,6 +31,6 @@ app.use(express.json());
 app.use(require("./routes"));
 
 //socket.io listening on port 3000
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log("Server start on port 3000");
 });
