@@ -14,7 +14,7 @@ module.exports = {
     async store(req, res) {
         const tweet = await Tweet.create(req.body);
 
-        req.io.emit("tweet", tweet);
+        req.io.emit("tweets", tweet);
 
         return res.json(tweet);
     }

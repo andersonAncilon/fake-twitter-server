@@ -9,7 +9,7 @@ module.exports = {
 
         await tweet.save();
 
-        req.io.emit("like", tweet);
+        req.io.emit("likes", tweet);
 
         return res.json(tweet);
     }
